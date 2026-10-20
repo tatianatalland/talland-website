@@ -1,0 +1,57 @@
+<!--
+path: /contact/
+title: Contact
+lead: Kom eens op de koffie. Wij werken op afspraak, op ons kantoor of bij u.
+description: Contacteer Talland Insurance, Leopoldlaan 210, 9400 Ninove. Afspraak, terugbelverzoek of offerte.
+-->
+<section class="section wrap grid-2">
+  <div>
+    <h2 style="margin-top:0">Stuur ons een bericht</h2>
+    <!--FORMNOTE-->
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="{{WEB3FORMS_KEY}}">
+      <input type="hidden" name="subject" value="Nieuw contactformulier via talland.be">
+      <input type="hidden" name="from_name" value="Website Talland">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+      <label for="reden">Reden van contact <span class="req">*</span></label>
+      <select id="reden" name="Reden" required>
+        <option value="">Maak een keuze</option>
+        <option>Afspraak maken</option><option>Terugbelverzoek</option><option>Offerte</option>
+        <option>Algemene vraag over verzekeringen</option><option>Vraag over leningen en kredieten</option>
+        <option>Check-up van mijn dossier</option><option>Ander</option>
+      </select>
+      <div class="row">
+        <div><label for="vn">Voornaam <span class="req">*</span></label><input id="vn" type="text" name="Voornaam" required autocomplete="given-name"></div>
+        <div><label for="an">Achternaam <span class="req">*</span></label><input id="an" type="text" name="Achternaam" required autocomplete="family-name"></div>
+      </div>
+      <div class="row">
+        <div><label for="tel">Telefoon of gsm <span class="req">*</span></label><input id="tel" type="tel" name="Telefoon" required autocomplete="tel"></div>
+        <div><label for="em">E-mail <span class="req">*</span></label><input id="em" type="email" name="email" required autocomplete="email"></div>
+      </div>
+      <fieldset><legend>U bent</legend>
+        <label class="choice"><input type="radio" name="Klanttype" value="Particulier" checked> Particulier</label>
+        <label class="choice"><input type="radio" name="Klanttype" value="KMO / zelfstandige / vrij beroep"> KMO, zelfstandige of vrij beroep</label>
+      </fieldset>
+      <label for="msg">Uw vraag</label>
+      <textarea id="msg" name="Bericht"></textarea>
+      <p class="small">Meld een schadegeval of ongeval liefst via <a href="https://www.mysigura.be/" rel="noopener">MySigura</a> of telefonisch. Deel via dit formulier geen medische gegevens.</p>
+      <label class="choice"><input type="checkbox" required name="Privacy" value="Akkoord"> <span>Ik ga akkoord dat Talland mijn gegevens gebruikt om mijn vraag te beantwoorden, zoals beschreven in de <a href="/privacyverklaring/">privacyverklaring</a>. <span class="req">*</span></span></label>
+      <p><button class="btn" type="submit">Verstuur</button></p>
+    </form>
+  </div>
+  <div>
+    <div class="card">
+      <h3>Kantoor</h3>
+      <p>{{kantoor_straat}}<br>{{kantoor_gemeente}}</p>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Leopoldlaan+210+9400+Ninove" rel="noopener">Bekijk op de kaart →</a></p>
+      <h3>Bereikbaarheid</h3>
+      <p>Op afspraak</p>
+      <p><a href="tel:{{tel_href}}">{{tel}}</a> (Michel)<br><a href="tel:+32479352378">+32 479 35 23 78</a> (Tatiana)<br><a href="mailto:{{mail}}">{{mail}}</a></p>
+    </div>
+    <div class="card" style="margin-top:22px">
+      <h3>Schade aangeven?</h3>
+      <p>Geef uw schadegeval rechtstreeks online aan.</p>
+      <a class="btn btn-ghost btn-small" href="https://www.mysigura.be/" rel="noopener">Naar MySigura</a>
+    </div>
+  </div>
+</section>

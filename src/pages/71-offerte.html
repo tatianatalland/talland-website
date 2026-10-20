@@ -1,0 +1,52 @@
+<!--
+path: /offerte-aanvraag/
+title: Offerte aanvraag
+lead: Vertel ons kort wat u zoekt. We nemen snel contact met u op.
+description: Vraag vrijblijvend een offerte aan voor verzekeringen, pensioen, sparen of kredieten bij Talland Insurance in Ninove.
+-->
+<section class="section wrap grid-2">
+  <div>
+    <!--FORMNOTE-->
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="{{WEB3FORMS_KEY}}">
+      <input type="hidden" name="subject" value="Nieuwe offerteaanvraag via talland.be">
+      <input type="hidden" name="from_name" value="Website Talland">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+      <fieldset><legend>Ik zoek informatie over <span class="req">*</span></legend>
+        <label class="choice"><input type="checkbox" name="Interesse[]" value="Mobiliteit"> Mobiliteit</label>
+        <label class="choice"><input type="checkbox" name="Interesse[]" value="Woning"> Woning</label>
+        <label class="choice"><input type="checkbox" name="Interesse[]" value="Gezin"> Gezin</label>
+        <label class="choice"><input type="checkbox" name="Interesse[]" value="Rechtsbijstand"> Rechtsbijstand</label>
+        <label class="choice"><input type="checkbox" name="Interesse[]" value="Huisdieren"> Huisdieren</label>
+        <label class="choice"><input type="checkbox" name="Interesse[]" value="Pensioen"> Pensioen</label>
+        <label class="choice"><input type="checkbox" name="Interesse[]" value="Sparen en beleggen"> Sparen en beleggen</label>
+        <label class="choice"><input type="checkbox" name="Interesse[]" value="Kredieten"> Kredieten</label>
+        <label class="choice"><input type="checkbox" name="Interesse[]" value="Zelfstandigen / KMO"> Zelfstandigen / KMO</label>
+      </fieldset>
+      <div class="row">
+        <div><label for="vn">Voornaam <span class="req">*</span></label><input id="vn" type="text" name="Voornaam" required autocomplete="given-name"></div>
+        <div><label for="an">Achternaam <span class="req">*</span></label><input id="an" type="text" name="Achternaam" required autocomplete="family-name"></div>
+      </div>
+      <div class="row">
+        <div><label for="em">E-mail <span class="req">*</span></label><input id="em" type="email" name="email" required autocomplete="email"></div>
+        <div><label for="tel">Telefoon of gsm</label><input id="tel" type="tel" name="Telefoon" autocomplete="tel"></div>
+      </div>
+      <div class="row">
+        <div><label for="pc">Postcode</label><input id="pc" type="text" name="Postcode" autocomplete="postal-code"></div>
+        <div><label for="gem">Gemeente</label><input id="gem" type="text" name="Gemeente" autocomplete="address-level2"></div>
+      </div>
+      <label for="msg">Uw vraag of opmerking <span class="req">*</span></label>
+      <textarea id="msg" name="Bericht" required></textarea>
+      <p class="small">Deel via dit formulier geen medische gegevens. Die bespreken we liever persoonlijk.</p>
+      <label class="choice"><input type="checkbox" required name="Privacy" value="Akkoord"> <span>Ik ga akkoord dat Talland mijn gegevens gebruikt om mijn aanvraag te behandelen, zoals beschreven in de <a href="/privacyverklaring/">privacyverklaring</a>. <span class="req">*</span></span></label>
+      <p><button class="btn" type="submit">Vraag mijn offerte aan</button></p>
+    </form>
+  </div>
+  <div class="card">
+    <h3>Liever bellen?</h3>
+    <p><a href="tel:{{tel_href}}">{{tel}}</a> (Michel)<br><a href="tel:+32479352378">+32 479 35 23 78</a> (Tatiana)<br><a href="mailto:{{mail}}">{{mail}}</a></p>
+    <h3>Kantoor</h3>
+    <p>{{kantoor_straat}}<br>{{kantoor_gemeente}}<br>Op afspraak</p>
+    <p class="small">Een offerte is vrijblijvend. Wij treden op als makelaar: de verzekeraar of kredietgever beslist over de aanvaarding.</p>
+  </div>
+</section>
